@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game_page</title>
+    <style type="text/css">
+    html{
+        height: 100%;
+    }
+        body{
+            background-image: url("table.jpg");
+            background-size: cover;
+            background-position: cover;
+            /*background-repeat: no-repeat;*/
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
+</head>
+
+<body>
+
+    <div style="position: fixed;top: 10%;left: 50%;font-family: 'Supermercado One', cursive;font-size: 24px">Dealer</div>
+    <div id="dealer" style="position: fixed;top: 15%;left: 35%"></div>
+
+    <span>
+    <div id="player_name" style="position: fixed;top: 75%;left: 37%;font-family: 'Supermercado One', cursive;font-size: 24px"></div>
+    <div style="position: fixed;top: 75%;left: 42%;font-family: 'Supermercado One', cursive;font-size: 24px">Total Amount = $</div><div id="total_amount" style="position: fixed;top: 75.2%;left: 51.5%"></div>
+    <div  style="position: fixed;top: 75%;left: 55%;font-family: 'Supermercado One', cursive;font-size: 24px">Bid Amount = $</div><div id="bid_amount" style="position: fixed;top: 75.2%;left: 63.5%"></div>
+    </span>
+
+    <div id="player" style="position: fixed;top: 45%;left: 35%"></div>
+
+    <button id="5$"  onclick="Add_5()" class="btn btn-info" style="position: fixed; top: 85%;left:39%;text-align:center;height:40px;width:60px">5$</button>
+    <button id="10$" onclick="Add_10()" class="btn btn-warning" style="position: fixed; top: 85%;left: 43%;text-align:center;height:40px;width:60px">10$</button>
+    <button id="25$" onclick="Add_25()" class="btn btn-danger" style="position: fixed; top: 85%;left: 47%;text-align:center;height:40px;width:60px">25$</button>
+    <button id="deal" onclick="deal()"  class="btn btn-success" style="position: fixed; top: 85%;left: 51%;text-align:center;height:40px;width:60px"><b>Deal</b></button>
+    <button id="hit" onclick="hit()" class="btn btn-success" style="position: fixed; top: 85%;left: 55%;text-align:center;height:40px;width:60px"><b>Hit</b></button>
+    <button id="stand" onclick="count()" class="btn btn-success" style="position: fixed; top: 85%;left: 59%;text-align: center;height:40px;width:65px"><b>Stand</b></button>
+
+<!-- Used bootstrap modal to display the game results  -->
+
+         <div class="modal fade" id="result" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Game Over!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="modal_body" class="modal-body">
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="Quit()">Quit</button>
+              </div>
+            </div>
+          </div>
+         </div>
+
+<!-- Used bootstrap Navbar to show number of rounds left and redirect to main page -->
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <a class="navbar-brand" href="#" style="font-family: 'Supermercado One', cursive;"><b>Blackjack</b></a>
+        <div class="form-inline " style="margin-left: 75%">
+          <input class="form-control mr-sm-2" type="text" id="rounds_left" placeholder="Rounds left" aria-label="Search">
+          <button class="btn btn-outline-primary "  onclick="Quit()">Quit</button>
+        </div>
+    </nav>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="Game.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
