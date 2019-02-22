@@ -77,6 +77,13 @@ document.getElementById("stand").disabled = true;
 
 
     function Add_5(){
+      if(player_info.amount<5)
+      {
+          document.getElementById("5$").disabled = true;
+          document.getElementById("10$").disabled = true;
+          document.getElementById("25$").disabled = true;
+          return;
+      }
         player_info.bet+=5;
         player_info.amount-=5;
         document.getElementById("bid_amount").innerHTML = `<div style="font-size:20px"><b> ${player_info.bet} </b></div>`;
@@ -84,6 +91,13 @@ document.getElementById("stand").disabled = true;
             }
 
     function Add_10(){
+      if(player_info.amount<10)
+      {
+          // document.getElementById("5$").disabled = true;
+          document.getElementById("10$").disabled = true;
+          document.getElementById("25$").disabled = true;
+          return;
+      }
         player_info.bet+=10;
         player_info.amount-=10;
         document.getElementById("bid_amount").innerHTML = `<div style="font-size:20px"><b> ${player_info.bet} </b></div>`;
@@ -91,6 +105,13 @@ document.getElementById("stand").disabled = true;
             }
 
     function Add_25(){
+      if(player_info.amount<25)
+      {
+          // document.getElementById("5$").disabled = true;
+          // document.getElementById("10$").disabled = true;
+          document.getElementById("25$").disabled = true;
+          return;
+      }
         player_info.bet+=25;
         player_info.amount-=25;
         document.getElementById("bid_amount").innerHTML = `<div style="font-size:20px"><b> ${player_info.bet} </b></div>`;
@@ -201,7 +222,7 @@ document.getElementById("stand").disabled = true;
                 document.getElementById("deal").disabled = false;
                 document.getElementById("hit").disabled = true;
                 document.getElementById("stand").disabled = true;
-                if(total_round==10)
+                if(total_round==10 || player_info.amount==0)
                 {
                     document.getElementById("modal_body").innerHTML += `<div> Total hands won : ${player_info.curr_win} out of ${total_round} rounds <br> You started with 
                     ${localStorage.getItem("amount")} and ended up at ${player_info.amount} <br> Thanks for playing Blackjack!</div>`
