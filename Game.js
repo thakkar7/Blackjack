@@ -146,7 +146,7 @@ document.getElementById("stand").disabled = true;
                 p_ace++;
 
               // document.getElementById("player").innerHTML+= `<img src= ${initial_cards.image} style="height=5% width=5%">`;
-              document.getElementById("player").innerHTML+= `<img src= ${initial_cards.image} style="display: inline-block;float:left;margin: 0px;padding: 0px;max-height:250px">`;
+              document.getElementById("player").innerHTML+= `<img src= ${initial_cards.image} style="display: inline-block;float:left;margin: 0px;padding: 0px;max-height:170px">`;
         	}
         
 
@@ -156,7 +156,7 @@ document.getElementById("stand").disabled = true;
                 d_ace++;
             dealerSum = dealerSum+(initial_cards.value);
             dealer.push(initial_cards);
-            document.getElementById("dealer").innerHTML+= `<img src= ${initial_cards.image} style="display: inline-block;float:left;margin: 0px;padding: 0px;max-height:250px">`;
+            document.getElementById("dealer").innerHTML+= `<img src= ${initial_cards.image} style="display: inline-block;float:left;margin: 0px;padding: 0px;max-height:170px">`;
           }
 
 
@@ -251,7 +251,7 @@ document.getElementById("stand").disabled = true;
                      if(random_card.value==11)
                       p_ace++;
 
-                     document.getElementById("player").innerHTML+= `<img src= ${random_card.image} style="display: inline-block;float:left;margin: 0px;padding: 0px;max-height:250px">`;
+                     document.getElementById("player").innerHTML+= `<img src= ${random_card.image} style="display: inline-block;float:left;margin: 0px;padding: 0px;max-height:170px">`;
                     
 
                 		if(player_info.playerSum > 21 && p_ace>0) 
@@ -273,7 +273,7 @@ document.getElementById("stand").disabled = true;
                         dealer.push(random_card);
                         dealerSum+=random_card.value;
 
-                        document.getElementById("dealer").innerHTML+= `<img src= ${random_card.image} style="display: inline-block;float:left;margin: 0px;padding: 0px;max-height:250px">`;
+                        document.getElementById("dealer").innerHTML+= `<img src= ${random_card.image} style="display: inline-block;float:left;margin: 0px;padding: 0px;max-height:170px">`;
     
 
                         if(random_card.value==11)

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Blackjack</title>
 	<style type="text/css">
     html{
@@ -11,7 +12,38 @@
             background-size: cover;
             background-position: cover;
             /*background-repeat: no-repeat;*/
-        }
+          }
+          a.btn{
+          position: fixed;
+           top: 90%;
+           left: 47.5%;
+           font-size:18px;
+           height:5%;
+           width:5%;
+           border-radius: 15%;
+           padding-top: 8px
+          }
+
+            @media screen and (max-width: 575px) {
+            body {
+              background-image: url("start.jpg");
+              background-size: cover;
+            background-position: cover;
+            }
+          
+          
+             a.btn {
+              position: fixed;
+               top: 90%;
+               left: 44.5%;
+               font-size:16px;
+               height:6%;
+               width:13%;
+               border-radius: 15%;
+               padding-top: 8px
+             }
+          }
+
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -53,7 +85,7 @@
 </div>
 
 <div class="text-center">
-  <a href="" class="btn btn-outline-warning" data-toggle="modal" data-target="#player_details" style="position: fixed; top: 90%;left: 48.5%;font-size:18px;height:50px;width:70px;border-radius: 15%;padding-top: 8px">Play</a>
+  <a href="" class="btn btn-outline-warning button1" data-toggle="modal" data-target="#player_details" >Play</a>
 </div>
 
 
