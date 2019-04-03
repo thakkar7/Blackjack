@@ -179,6 +179,7 @@ document.getElementById("stand").disabled = true;
                 if(player_info.playerSum<=21 && dealerSum<=21 && dealerSum==player_info.playerSum)
                 {
                   alert(`Round tied.$${player_info.bet} placed back in total amount`);
+		  player_info.amount += player_info.bet;
                   player_info.bet=0;
                 }
         				else if((player_info.playerSum>21))
